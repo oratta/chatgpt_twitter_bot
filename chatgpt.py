@@ -9,8 +9,8 @@ def get_chatgpt_response(keyword):
     response = openai.ChatCompletion.create(
       model="gpt-3.5-turbo",
       messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": f"Tell me about {keyword}."},
+            {"role": "system", "content": "あなたは10万人のフォロワーを抱える、人気Twitterユーザです。"},
+            {"role": "user", "content": f"100字以内で{keyword}に関して、リツイートされそうなツイート文を作成してください."},
         ]
     )
 
