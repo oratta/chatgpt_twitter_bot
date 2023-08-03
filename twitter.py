@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 
 def post_tweet(content):
+    print("start tweet")
     load_dotenv()
     consumer_key = os.getenv('TWITTER_CONSUMER_KEY')
     consumer_secret = os.getenv('TWITTER_CONSUMER_SECRET')
@@ -17,7 +18,7 @@ def post_tweet(content):
                            access_token_secret=access_token_secret)
 
     client.create_tweet(text=content)
-
+    print("end tweet")
     # auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     # auth.set_access_token(access_token, access_token_secret)
     #
